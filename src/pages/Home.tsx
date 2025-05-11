@@ -9,10 +9,10 @@ const Home = () => {
         <div className="max-w-3xl">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl mb-6">
             <span className="block">Hi, I'm</span>
-            <span className="block text-primary">John Doe</span>
+            <span className="block text-primary">Shai Sasonker</span>
           </h1>
           <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-            A passionate frontend developer specializing in creating beautiful, 
+            A passionate full stack developer specializing in creating beautiful, 
             responsive, and user-friendly websites and applications.
           </p>
           <div className="flex gap-4">
