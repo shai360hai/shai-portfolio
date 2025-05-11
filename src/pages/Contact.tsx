@@ -9,7 +9,7 @@ import { Github, Linkedin } from "lucide-react";
 import emailjs from 'emailjs-com';
 
 // Initialize EmailJS with your user ID
-emailjs.init("YOUR_ACTUAL_USER_ID"); // Replace this with your actual User ID from EmailJS dashboard
+emailjs.init("k5bm7pk4oQohyGwEX"); // Replace this with your actual User ID from EmailJS dashboard
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -33,8 +33,8 @@ const Contact = () => {
     try {
       // Send email using EmailJS
       await emailjs.send(
-        'YOUR_ACTUAL_SERVICE_ID', // Replace this with your actual Service ID from EmailJS dashboard
-        'YOUR_ACTUAL_TEMPLATE_ID', // Replace this with your actual Template ID from EmailJS dashboard
+        'service_5hketqk', // Replace this with your actual Service ID from EmailJS dashboard
+        'template_sjl9z8s', // Replace this with your actual Template ID from EmailJS dashboard
         {
           from_name: formData.name,
           from_email: formData.email,
