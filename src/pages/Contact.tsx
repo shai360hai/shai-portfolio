@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
+import { Github, Linkedin } from "lucide-react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -129,15 +130,22 @@ const Contact = () => {
           <div>
             <h2 className="text-xl font-semibold mb-4">Connect</h2>
             <div className="flex space-x-4">
-              {["GitHub", "LinkedIn", "Twitter", "Instagram"].map((platform) => (
-                <a 
-                  key={platform}
-                  href="#" 
-                  className="bg-secondary text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded"
-                >
-                  {platform}
-                </a>
-              ))}
+              <a 
+                href="https://github.com/shai360hai" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-secondary text-secondary-foreground hover:bg-secondary/80 p-3 rounded flex items-center justify-center"
+              >
+                <Github size={20} />
+              </a>
+              <a 
+                href="https://www.linkedin.com/in/shaisasonker/" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-secondary text-secondary-foreground hover:bg-secondary/80 p-3 rounded flex items-center justify-center"
+              >
+                <Linkedin size={20} />
+              </a>
             </div>
           </div>
         </div>
