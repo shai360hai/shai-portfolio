@@ -1,49 +1,61 @@
-
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 const projects = [
   {
-    title: "E-commerce Website",
-    description: "A full-featured online store built with React, Redux, and Stripe integration",
-    tags: ["React", "Redux", "Node.js", "Stripe"],
-    image: "https://placehold.co/600x400",
-    link: "#"
+    title: "Weather App",
+    description:
+      "A responsive weather application using OpenWeather API with real-time data and dynamic UI.",
+    tags: ["React", "API", "Tailwind CSS"],
+    image: "/projects/weather.png", // Replace with real image path
+    link: "https://github.com/shai360hai/myweatherapp",
   },
   {
-    title: "Weather Dashboard",
-    description: "Real-time weather application with interactive maps and forecasts",
-    tags: ["JavaScript", "API", "CSS", "Responsive"],
-    image: "https://placehold.co/600x400",
-    link: "#"
+    title: "Lyrics Fetcher",
+    description:
+      "A Python script that fetches song lyrics using the Lyrics.ovh API with simple CLI interaction.",
+    tags: ["Python", "API", "CLI"],
+    image: "/projects/lyrics.png", // Replace with real image path
+    link: "https://github.com/shai360hai/Lyrics-Fetcher-Lyrics.ovh-Python",
   },
   {
-    title: "Task Management App",
-    description: "Productivity application with drag-and-drop interface and team collaboration features",
-    tags: ["React", "TypeScript", "Firebase"],
-    image: "https://placehold.co/600x400",
-    link: "#"
+    title: "Sifria - Book Management App",
+    description:
+      "A full-stack book management system built with React and Firebase for managing a personal library.",
+    tags: ["React", "Firebase", "Tailwind CSS"],
+    image: "/projects/sifria.png", // Replace with real image path
+    link: "https://github.com/shai360hai/Sifria",
   },
   {
-    title: "Portfolio Website",
-    description: "Personal portfolio website showcasing projects and skills",
-    tags: ["React", "Tailwind CSS", "Framer Motion"],
-    image: "https://placehold.co/600x400",
-    link: "#"
+    title: "Friendflix",
+    description:
+      "A simple React app that allows users to add and rate movies with their friends — like a social watchlist.",
+    tags: ["React", "Hooks", "JavaScript"],
+    image: "/projects/friendflix.png", // Replace with real image path
+    link: "https://github.com/shai360hai/friendflix",
   },
 ];
 
 const Projects = () => {
   return (
     <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-      <h1 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">My Projects</h1>
+      <h1 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
+        My Projects
+      </h1>
       <p className="text-lg text-muted-foreground mb-12">
         A collection of my recent work and personal projects
       </p>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {projects.map((project, index) => (
-          <Card key={index} className="overflow-hidden">
+          <Card key={index} className="overflow-hidden transition hover:shadow-lg">
             <div className="aspect-video w-full bg-muted">
               <img
                 src={project.image}
@@ -57,9 +69,9 @@ const Projects = () => {
             </CardHeader>
             <CardContent>
               <div className="flex flex-wrap gap-2">
-                {project.tags.map((tag) => (
-                  <span 
-                    key={tag} 
+                {project.tags.map((tag, i) => (
+                  <span
+                    key={`${index}-${tag}-${i}`}
                     className="bg-secondary text-secondary-foreground px-2 py-1 rounded-md text-xs"
                   >
                     {tag}
@@ -69,7 +81,11 @@ const Projects = () => {
             </CardContent>
             <CardFooter>
               <Button asChild>
-                <a href={project.link} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   View Project
                 </a>
               </Button>
