@@ -1,3 +1,4 @@
+
 import {
   Card,
   CardContent,
@@ -14,7 +15,6 @@ const projects = [
     description:
       "A responsive weather application using OpenWeather API with real-time data and dynamic UI.",
     tags: ["React", "API", "Tailwind CSS"],
-    image: "/projects/weather.png", // Replace with real image path
     link: "https://github.com/shai360hai/myweatherapp",
   },
   {
@@ -22,7 +22,6 @@ const projects = [
     description:
       "A Python script that fetches song lyrics using the Lyrics.ovh API with simple CLI interaction.",
     tags: ["Python", "API", "CLI"],
-    image: "/projects/lyrics.png", // Replace with real image path
     link: "https://github.com/shai360hai/Lyrics-Fetcher-Lyrics.ovh-Python",
   },
   {
@@ -30,7 +29,6 @@ const projects = [
     description:
       "A full-stack book management system built with React and Firebase for managing a personal library.",
     tags: ["React", "Firebase", "Tailwind CSS"],
-    image: "/projects/sifria.png", // Replace with real image path
     link: "https://github.com/shai360hai/Sifria",
   },
   {
@@ -38,7 +36,6 @@ const projects = [
     description:
       "A simple React app that allows users to add and rate movies with their friends — like a social watchlist.",
     tags: ["React", "Hooks", "JavaScript"],
-    image: "/projects/friendflix.png", // Replace with real image path
     link: "https://github.com/shai360hai/friendflix",
   },
 ];
@@ -55,14 +52,7 @@ const Projects = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {projects.map((project, index) => (
-          <Card key={index} className="overflow-hidden transition hover:shadow-lg">
-            <div className="aspect-video w-full bg-muted">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-full object-cover"
-              />
-            </div>
+          <Card key={index} className="transition hover:shadow-lg">
             <CardHeader>
               <CardTitle>{project.title}</CardTitle>
               <CardDescription>{project.description}</CardDescription>
