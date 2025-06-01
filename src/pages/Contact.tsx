@@ -167,7 +167,7 @@ const Contact = () => {
           </div>
           
           <div>
-            <h2 className="text-xl font-semibold mb-4">Connect</h2>
+            <h2 className="text-xl font-semibold mb-4">Other ways to connect</h2>
             <div className="flex space-x-4">
               <a 
                 href="https://github.com/shai360hai" 
