@@ -38,6 +38,13 @@ const projects = [
     tags: ["React", "Hooks", "JavaScript"],
     link: "https://github.com/shai360hai/friendflix",
   },
+   {
+    title: "ToDoList",
+    description:
+      "A simple TODO list using react.vite, next.js, tailwind css, material UI",
+    tags: ["React", "css", "next.js","material UI"],
+    link: "https://github.com/shai360hai/ToDoList",
+  },
 ];
 
 const Projects = () => {
